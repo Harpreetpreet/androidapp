@@ -8,7 +8,10 @@ const Section = styled.section`
   padding: 1rem 1.5rem;
   font-family: ${props => props.theme.primaryFontFamily};
   .navbar {
-    background-color: transparent;
+    background: #000000;
+  }
+  .home:hover {
+    color: #b82124 !important;
   }
   .navbar-brand {
     margin-right: 20px;
@@ -60,52 +63,48 @@ export default class Header extends React.Component {
 
     return (
       <Section className="section">
-        <div className="container">
-          <nav
-            className="navbar"
-            role="navigation"
-            aria-label="main navigation"
-          >
-            <div className="navbar-brand">
-              <Link className="navbar-item" to="/">
-                <img src="/images/logo-1024.png" alt="site logo" />
+        <nav className="navbar" role="navigation" aria-label="main navigation">
+          <div className="navbar-brand">
+            <Link className="home navbar-item is-size-4 has-text-white" to="/">
+              Resurrection Remix OS
+            </Link>
+            <a
+              href="#"
+              role="button"
+              className={
+                isActive
+                  ? 'navbar-burger burger mobile is-active'
+                  : 'navbar-burger burger mobile'
+              }
+              aria-label="menu"
+              aria-expanded="false"
+              data-target="navbarBasicExample"
+              onClick={() => this.handleMobileMenu()}>
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </a>
+          </div>
+          <div className={isActive ? 'navbar-menu is-active' : 'navbar-menu'}>
+            <div className="navbar-end">
+              <Link to="/" className="navbar-item">
+                Screenshots
               </Link>
-              <a
-                href="#"
-                role="button"
-                className={
-                  isActive
-                    ? 'navbar-burger burger mobile is-active'
-                    : 'navbar-burger burger mobile'
-                }
-                aria-label="menu"
-                aria-expanded="false"
-                data-target="navbarBasicExample"
-                onClick={() => this.handleMobileMenu()}
-              >
-                <span aria-hidden="true" />
-                <span aria-hidden="true" />
-                <span aria-hidden="true" />
-              </a>
+              <Link to="/about" className="navbar-item">
+                Features
+              </Link>
+              <Link to="/news" className="navbar-item">
+                Downloads
+              </Link>
+              <Link to="/contact" className="navbar-item">
+                Team
+              </Link>
+              <Link to="/contact" className="navbar-item">
+                Credits
+              </Link>
             </div>
-            <div className={isActive ? 'navbar-menu is-active' : 'navbar-menu'}>
-              <div className="navbar-start">
-                <Link to="/" className="navbar-item">
-                  Home
-                </Link>
-                <Link to="/about" className="navbar-item">
-                  About
-                </Link>
-                <Link to="/news" className="navbar-item">
-                  News
-                </Link>
-                <Link to="/contact" className="navbar-item">
-                  Contact
-                </Link>
-              </div>
-            </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </Section>
     );
   }
