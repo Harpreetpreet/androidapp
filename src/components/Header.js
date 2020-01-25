@@ -39,6 +39,8 @@ const Section = styled.section`
     opacity: 0.6;
     border-radius: 4px;
   }
+  margin: 0rem;
+  padding: 0rem;
 `;
 
 export default class Header extends React.Component {
