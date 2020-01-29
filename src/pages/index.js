@@ -5,7 +5,7 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import About from '../components/About';
 import Screenshot from '../components/Screenshot';
-import Card from '../components/Card';
+import Cardcontent from '../components/Cardcontent';
 
 const Section = styled.div`
   text-align: center;
@@ -82,7 +82,7 @@ export default class IndexPage extends React.Component {
         </Section>
         <About />
         <Screenshot />
-        <Card />
+        <Cardcontent />
       </Layout>
     );
   }

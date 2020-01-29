@@ -1,25 +1,43 @@
 import React from 'react';
 import styled from 'styled-components';
-import Cardcontent from './Cardcontent';
 
-const Container = styled.div``;
-
-const Card = () => (
+const Container = styled.div`
+  .card-image {
+    background: black;
+    height: 42rem;
+    background-attachment: fixed;
+  }
+  .long {
+    height: 40rem !important;
+  }
+  .card-content {
+    background: black;
+  }
+  p {
+    color: white !important;
+  }
+`;
+const Card = props => (
   <Container>
-              <div className="columns ">
-            <div className="column">
-              <div className="card-image text">
-                <Card
-                  img="https://colorlib.com/preview/theme/shotgear/img/blog/blog_1.png"
-                  title="MAD WHALES GHATHERING OPEN CAN'T"
-                  subtitle="Is life form dominion under very seasons together them divide so, she'd bearing sixth"
-                />
-              </div>
+    <section className="section ">
+      <div className="card">
+        <div className="card-image">
+          <figure className="image is-4by3">
+            <img className="long" src={props.img} alt="Placeholder image" />
+          </figure>
+        </div>
+        <div className="card-content">
+          <div className="media">
+            <div className="media-content">
+              <p className="title is-4  has-text-centered">{props.title}</p>
+              <p className="subtitle is-7  has-text-centered">
+                {props.subtitle}
+              </p>
             </div>
-            </div>
-      <Cardcontent img="../images/screenshot_01.png" />
-      <Cardcontent img="../images/screenshot_05.png" />
-      <Cardcontent img="../images/screenshot_03.png" />
+          </div>
+        </div>
+      </div>
+    </section>
   </Container>
 );
 export default Card;
