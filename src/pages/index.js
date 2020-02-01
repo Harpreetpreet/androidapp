@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -6,6 +8,8 @@ import Layout from '../components/Layout';
 import About from '../components/About';
 import Screenshot from '../components/Screenshot';
 import Cardcontent from '../components/Cardcontent';
+import Feature from '../components/Feature';
+import Featurecontent from '../components/Featurecontent';
 
 const Section = styled.div`
   text-align: center;
@@ -35,8 +39,9 @@ const Section = styled.div`
     content: '\e807';
     color: #ff4e7e;
   }
-  margin: 0rem;
-  padding: 0rem;
+  .container {
+    margin-bottom: 1rem;
+  }
 `;
 
 export default class IndexPage extends React.Component {
@@ -59,6 +64,7 @@ export default class IndexPage extends React.Component {
               <li className="icon2">
                 <a
                   href="https://www.facebook.com/resurrectionremixrom"
+                  // eslint-disable-next-line react/jsx-no-target-blank
                   target="_blank">
                   <i className="fab fa-twitter" />
                 </a>
@@ -83,6 +89,8 @@ export default class IndexPage extends React.Component {
         <About />
         <Screenshot />
         <Cardcontent />
+        <Feature />
+        <Featurecontent />
       </Layout>
     );
   }

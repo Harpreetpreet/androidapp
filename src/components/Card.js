@@ -1,16 +1,14 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  .card-image {
-    background: black;
-    height: 42rem;
-    background-attachment: fixed;
-  }
+ 
   .long {
     height: 40rem !important;
   }
-  .card-content {
+  .content {
     background: black;
   }
   p {
@@ -21,12 +19,12 @@ const Card = props => (
   <Container>
     <section className="section ">
       <div className="card">
-        <div className="card-image">
+        <div className="img card-image">
           <figure className="image is-4by3">
             <img className="long" src={props.img} alt="Placeholder image" />
           </figure>
         </div>
-        <div className="card-content">
+        <div className="card-content content">
           <div className="media">
             <div className="media-content">
               <p className="title is-4  has-text-centered">{props.title}</p>
