@@ -74,7 +74,7 @@ export default class Header extends React.Component {
       <Section className="section">
         <div className="container">
           <nav
-            className="navbar is-fixed-top"
+            className="navbar "
             role="navigation"
             aria-label="main navigation">
             <div className="navbar-brand">
