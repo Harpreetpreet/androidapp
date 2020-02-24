@@ -4,7 +4,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
- 
   .long {
     height: 40rem !important;
   }

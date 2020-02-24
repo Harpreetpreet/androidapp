@@ -12,6 +12,7 @@ import Feature from '../components/Feature';
 import Featurecontent from '../components/Featurecontent';
 
 const Section = styled.div`
+  margin-top: -2rem;
   text-align: center;
   background-image: url('../images/top-bg.jpg');
   background-attachment: fixed;
@@ -51,35 +52,41 @@ export default class IndexPage extends React.Component {
         <Seo title="Home" description="Welcome to GatsbyJs v1" />
         <Section className="section">
           <div className="container is-size-1">
-            <img src="../images/rr_head_banner.png" />
+            <img
+              className="is-size-1-mobile"
+              src="../images/rr_head_banner.png"
+            />
 
             <ul className="icon">
               <li className="icon1">
                 <a
                   href="https://www.facebook.com/resurrectionremixrom"
-                  target="_blank">
+                  target="_blank"
+                >
                   <i className="fab fa-facebook-f" />
                 </a>
               </li>
               <li className="icon2">
                 <a
                   href="https://www.facebook.com/resurrectionremixrom"
-                  // eslint-disable-next-line react/jsx-no-target-blank
-                  target="_blank">
+                  target="_blank"
+                >
                   <i className="fab fa-twitter" />
                 </a>
               </li>
               <li className="icon3">
                 <a
                   href="https://www.facebook.com/resurrectionremixrom"
-                  target="_blank">
+                  target="_blank"
+                >
                   <i className="fab fa-google-plus-g" />
                 </a>
               </li>
               <li className="icon4">
                 <a
                   href="https://www.facebook.com/resurrectionremixrom"
-                  target="_blank">
+                  target="_blank"
+                >
                   <i className="fab fa-github" />
                 </a>
               </li>
