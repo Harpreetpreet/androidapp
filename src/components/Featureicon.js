@@ -1,22 +1,35 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  .icon {
+    color: #c82428;
+  }
+  .card {
+    min-height: 13rem;
+    background: #212121;s
+  }
+`;
 
 const Featureicon = props => (
-  <container>
-    <section className="section ">
-      <div className="card">
-        <span className="icon">{props.icon}</span>
-        <div className="card-content">
-          <div className="media">
-            <div className="media-content">
-              <p className="title is-4  has-text-centered">{props.title}</p>
-              <p className="subtitle is-7  has-text-centered">
-                {props.subtitle}
-              </p>
-            </div>
+  <Container>
+    <div className="card">
+      <div className="card-content has-text-centered">
+        <span className="icon is-size-1 ">
+          <i className={props.icon} />
+        </span>
+        <div className="media">
+          <div className="media-content">
+            <h1 className="title is-5  has-text-centered has-text-white">
+              {props.title}
+            </h1>
+            <p className=" is-size-6  has-text-centered has-text-white">
+              {props.subtitle}
+            </p>
           </div>
         </div>
       </div>
-    </section>
-  </container>
+    </div>
+  </Container>
 );
 export default Featureicon;

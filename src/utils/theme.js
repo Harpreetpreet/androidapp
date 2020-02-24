@@ -61,12 +61,6 @@ const GlobalStyle = createGlobalStyle`
   p {
     line-height: 1.5rem;
   }
-  p, .title, .box {
-    color: ${theme.textColor} !important;
-  }
-  .subtitle {
-    color: ${lighten(0.06, theme.textColor)} !important;
-  }
   .button.is-primary {
     background-color: ${theme.mainBrandColor};
     transition: background-color 0.2s ease;
